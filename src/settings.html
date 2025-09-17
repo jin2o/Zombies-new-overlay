@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombies Overlay Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="settings-container">
+        <div class="settings-header">
+            <div class="header-content">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <span class="brand-text">Zombies Settings</span>
+                </div>
+                <div class="header-controls">
+                    <button class="control-btn close-btn" id="close-settings-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="settings-content">
+            <div class="settings-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-key"></i> Hypixel API Key</h2>
+                    <p>Enter your Hypixel API key to enable advanced features</p>
+                </div>
+                
+                <div class="settings-group">
+                    <label for="hypixel-api-key">API Key</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="hypixel-api-key" placeholder="Enter your Hypixel API key">
+                        <button class="toggle-btn" id="toggle-visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <button class="action-btn" id="save-api-key">
+                        <i class="fas fa-save"></i> Save API Key
+                    </button>
+                    <div id="api-test-result" class="api-test-result hidden">
+                        <i class="fas fa-spinner fa-spin"></i> Testing...
+                    </div>
+                    <p class="help-text">
+                        Your API key is stored locally and never sent to any server except Hypixel's API.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-alt"></i> Log File Settings</h2>
+                    <p>Configure the path to your Minecraft log file</p>
+                </div>
+                
+                <div class="settings-group">
+                    <label for="log-file-path">Log File Path</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="log-file-path" placeholder="Enter path to latest.log file">
+                    </div>
+                    <button class="action-btn" id="save-log-path">
+                        <i class="fas fa-save"></i> Save Log Path
+                    </button>
+                    <p class="help-text">
+                        Default path: %APPDATA%\.minecraft\logs\latest.log (Windows)<br>
+                        ~/.minecraft/logs/latest.log (macOS/Linux)<br>
+                        Change this only if your Minecraft installation is in a different location.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="settings.js"></script>
+</body>
+</html>

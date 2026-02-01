@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+dist/
+*.log
+.env
+.idea/
+.vscode/
+*.exe
+*.zip
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.stylelintcache
+node_modules/
+package-lock.json

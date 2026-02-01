@@ -1,0 +1,63 @@
+{
+  "name": "zombies-overlay",
+  "version": "1.0.0",
+  "description": "A Zombies/Hypixel overlay built with Electron",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "dist": "electron-builder --win --mac --linux"
+  },
+  "keywords": [
+    "zombies",
+    "hypixel",
+    "overlay",
+    "electron"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "build": {
+    "appId": "com.zombies.overlay",
+    "productName": "Zombies Overlay",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/main.js",
+      "src/index.html",
+      "src/settings.html",
+      "src/renderer.js",
+      "src/settings.js",
+      "src/style.css",
+      "src/api.js",
+      "src/fetcher.js",
+      "src/LogReader.js",
+      "src/misc.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/build/icon.ico"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "dmg",
+      "icon": "assets/build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility",
+      "icon": "assets/build/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "sha1": "^1.1.1",
+    "tail": "^2.2.6"
+  }
+}

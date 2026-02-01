@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zombies Overlay</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="overlay-container">
+
+    <!-- HEADER -->
+    <div class="overlay-header">
+      <div class="header-content">
+        <div class="brand">
+          <div class="brand-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <span class="brand-text">Zombies Overlay</span>
+        </div>
+        <div class="header-controls">
+          <button class="control-btn" id="settings-btn" title="Settings">
+            <i class="fas fa-cog"></i>
+          </button>
+          <button class="control-btn close-btn" id="close-button" title="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="stats-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="fas fa-users"></i>
+            <span>Players</span>
+            <span id="player-count-badge" class="player-count-badge"></span>
+          </div>
+        </div>
+        <div class="panel-content" id="stats-content">
+          <table class="players-table" id="players-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Wins</th>
+                <th>Wins DE</th>
+                <th>Wins BB</th>
+                <th>Wins PR</th>
+                <th>Best AA</th>
+                <th>Accuracy</th>
+              </tr>
+            </thead>
+            <tbody id="players-table-body">
+              <!-- Player rows generated dynamically -->
+            </tbody>
+          </table>
+          <div class="no-players-table" style="display:none;">
+            No players connected
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="overlay-footer">
+      <div class="footer-info">
+        <span class="status-indicator"></span>
+        <span class="status-text">Disconnected</span>
+      </div>
+      <div class="footer-actions">
+        <!-- Space for additional buttons -->
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+
+</html>
